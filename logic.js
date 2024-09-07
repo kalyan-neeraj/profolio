@@ -1,4 +1,3 @@
-// Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -9,7 +8,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Navbar background change on scroll
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('#navbar');
     if (window.scrollY > 50) {
@@ -19,14 +17,13 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// Collapsible functionality
 document.querySelectorAll('.collapsible-header').forEach(header => {
     header.addEventListener('click', function() {
         this.parentElement.classList.toggle('active');
     });
 });
 
-// Project card click handler
+// Project card
 document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('click', function() {
         const githubUrl = this.getAttribute('data-github');
@@ -36,7 +33,6 @@ document.querySelectorAll('.project-card').forEach(card => {
     });
 });
 
-// Lazy loading for images
 if ('IntersectionObserver' in window) {
     const imageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
